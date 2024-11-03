@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-LOCAL_PATH := device/vivo/k6853v1_64_6360
+DEVICE_PATH := device/vivo/k6853v1_64_6360
 
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     $(DEVICE_PATH)/security/local_OTA
