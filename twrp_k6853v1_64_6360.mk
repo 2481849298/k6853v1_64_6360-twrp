@@ -23,7 +23,7 @@ $(call inherit-product-if-exists, vendor/pb/config/common.mk)
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root,recovery/root) \
 	$(LOCAL_PATH)/prebuilt/dtb:dtb.img
 
-(call inherit-product, device/vivo/k6853v1_64_6360/device.mk
+$(call inherit-product, device/vivo/k6853v1_64_6360/device.mk)	
 
 PRODUCT_DEVICE := k6853v1_64_6360
 PRODUCT_NAME := twrp_k6853v1_64_6360
