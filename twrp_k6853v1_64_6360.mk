@@ -26,7 +26,7 @@ PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/roo
 (call inherit-product, device/vivo/k6853v1_64_6360/device.mk
 
 PRODUCT_DEVICE := k6853v1_64_6360
-PRODUCT_NAME := omni_k6853v1_64_6360
+PRODUCT_NAME := twrp_k6853v1_64_6360
 PRODUCT_BRAND := vivo
 PRODUCT_MODEL := vivo
 PRODUCT_MANUFACTURER := vivo
