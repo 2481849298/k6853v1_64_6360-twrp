@@ -3,6 +3,10 @@ name: 构建-PBRP
 on:
   workflow_dispatch:
     inputs:
+      MANIFEST_URL:
+        description: 'MANIFEST_URL (if want to use SSH keys, use git@github.com:XXXXX)'
+        required: true
+        default: 'https://github.com/PitchBlackRecoveryProject/manifest_pb.git'
       MANIFEST_BRANCH:
         description: 'MANIFEST_BRANCH'
         required: true
@@ -112,7 +116,7 @@ jobs:
         cd android-recovery
         git config --global user.name "lazycodebuilder"
         git config --global user.email "154446636+lazycodebuilder@users.noreply.github.com"
-        repo init --depth=1 -u https://github.com/PitchBlackRecoveryProject/manifest_pb.git -b ${{ github.event.inputs.MANIFEST_BRANCH }}
+        repo init --depth=1 -u ${{ github.event.inputs.MANIFEST_URL }} -b ${{ github.event.inputs.MANIFEST_BRANCH }}
 
     - name: Repo Sync
       run: |
