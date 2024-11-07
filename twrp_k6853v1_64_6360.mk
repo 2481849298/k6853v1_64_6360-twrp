@@ -1,4 +1,16 @@
-## Inherit from those products. Most specific first.
+#
+# Copyright (C) 2024 The Android Open Source Project
+# Copyright (C) 2024 SebaUbuntu's TWRP device tree generator
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+# Inherit some common Omni stuff.
+$(call inherit-product, vendor/omni/config/common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
@@ -8,14 +20,11 @@ $(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
 $(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
-# Inherit from our custom product configuration
-$(call inherit-product, vendor/twrp/config/common.mk)
+
 
 # Enable updating of APEXes
 $(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
-# Inherit from TWRP-common stuffs, if building TWRP.
-$(call inherit-product-if-exists, vendor/twrp/config/common.mk)
 
 # Inherit from PBRP-common stuff, if building PBRP.
 $(call inherit-product-if-exists, vendor/pb/config/common.mk)
