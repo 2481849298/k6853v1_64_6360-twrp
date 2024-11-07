@@ -164,8 +164,8 @@ jobs:
       with:
         files: |
           android-recovery/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/${{ env.BUILD_TARGET_NAME }}.img
-        name: ${{ github.event.inputs.DEVICE_TREE_BRANCH }}-PBRP
-        tag_name: ${{ github.event.inputs.DEVICE_TREE_BRANCH }}-PBRP
+        name: ${{ github.event.inputs.PBRP Manifest Branch }}-PBRP
+        tag_name: ${{ github.event.inputs.PBRP Manifest Branch }}-PBRP
         body: |
           Build: ${{ github.event.inputs.MANIFEST_BRANCH }}
           Device: [Device Tree/Branch](${{ github.event.inputs.DEVICE_TREE }}/tree/${{ github.event.inputs.DEVICE_TREE_BRANCH }})

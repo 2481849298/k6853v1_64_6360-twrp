@@ -161,8 +161,8 @@ jobs:
       with:
         files: | 
           workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/${{ github.event.inputs.BUILD_TARGET }}.img
-        name: ${{ github.event.inputs.DEVICE_TREE_BRANCH }}-TWRP
-        tag_name: ${{ github.event.inputs.DEVICE_TREE_BRANCH }}-TWRP
+        name: ${{ github.event.inputs.MANIFEST_BRANCH }}-TWRP
+        tag_name: ${{ github.event.inputs.MANIFEST_BRANCH }}-TWRP
         body: |
           Manifest: ${{ github.event.inputs.MANIFEST_BRANCH }}
           Device: ${{ github.event.inputs.DEVICE_NAME }}
