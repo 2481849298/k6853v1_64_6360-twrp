@@ -43,7 +43,7 @@ TARGET_OTA_ASSERT_DEVICE := vivo6853 mt6853 mtk6853 k6853v1_64_6360 PD2057
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 product.version=PD2057_A_1.14.11 fingerprint.abbr=10/QP1A.190711.020 buildvariant=user
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery  # TODO: Used in other device tree. Do we need it?
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
-TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
